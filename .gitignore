@@ -1,0 +1,28 @@
+# Credenciales y secretos
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencias y artefactos locales
+node_modules/
+dist/
+build/
+.cache/
+*.log
+
+# Archivos temporales
+tmp/
+temp/
+*.bak
+*.swp
