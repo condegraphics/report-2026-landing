@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f8">
+  <meta name="description" content="Agenda de las Charlas Técnico Comerciales de REPORT 2026. Presentaciones gratuitas de sponsors y expositores, del 1 al 3 de septiembre, de 15:30 a 19:00, en Golden Center – Parque Norte.">
+  <title>Charlas Técnico Comerciales | REPORT 2026</title>
+  <style>
+    :root {
+      --ink: #111318;
+      --muted: #68717c;
+      --paper: #f7f8f9;
+      --card: #ffffff;
+      --line: #e3e7eb;
+      --accent: #b8e923;
+      --accent-2: #d9ff67;
+      --blue: #0e73e8;
+      --shadow: 0 18px 45px rgba(17, 19, 24, .08);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin-inline: auto; }
+    .skip-link { position: absolute; left: -999px; top: 8px; }
+    .skip-link:focus { left: 16px; z-index: 10; background: var(--ink); color: #fff; padding: 10px 14px; border-radius: 8px; }
+
+    header {
+      position: sticky; top: 0; z-index: 5;
+      background: rgba(247, 248, 249, .92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(227, 231, 235, .9);
+    }
+    .nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 900; letter-spacing: -.04em; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 11px 4px 11px 4px; display: grid; place-items: center; background: var(--accent); font-weight: 950; font-size: 20px; }
+    .brand-text { font-size: 15px; line-height: .9; }
+    .brand-text small { display: block; font-size: 9px; letter-spacing: .16em; margin-top: 4px; }
+    .nav-links { display: flex; gap: 18px; align-items: center; font-size: 13px; font-weight: 750; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover, .nav-links a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+
+    .hero { padding: clamp(56px, 10vw, 112px) 0 70px; background: linear-gradient(135deg, #f7f8f9 0%, #f7f8f9 64%, #edf5d5 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.18fr .82fr; gap: 54px; align-items: center; }
+    .eyebrow, .section-kicker { margin: 0 0 14px; color: #597014; font-size: 11px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 720px; margin-bottom: 30px; font-size: clamp(46px, 7vw, 88px); line-height: .92; letter-spacing: -.075em; }
+    .hero-copy { max-width: 660px; margin-bottom: 0; color: #4d5660; font-size: clamp(17px, 2vw, 20px); line-height: 1.65; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; min-height: 46px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--ink); text-decoration: none; font-size: 14px; font-weight: 850; transition: transform .2s ease, box-shadow .2s ease; }
+    .button:hover, .button:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(17, 19, 24, .12); }
+    .button-primary { background: var(--ink); color: #fff; }
+    .button-secondary { background: #fff; }
+    .hero-card { background: rgba(255, 255, 255, .82); border: 1px solid rgba(17, 19, 24, .08); border-radius: var(--radius-lg); padding: 26px; box-shadow: var(--shadow); }
+    .hero-card dl { margin: 0; }
+    .hero-card div { padding: 15px 0; border-bottom: 1px solid var(--line); }
+    .hero-card div:first-child { padding-top: 0; }
+    .hero-card div:last-child { padding-bottom: 0; border-bottom: 0; }
+    dt { color: #697a17; font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    dd { margin: 5px 0 0; font-size: 18px; font-weight: 820; letter-spacing: -.02em; }
+    dd small { color: var(--muted); font-size: 13px; font-weight: 500; }
+
+    main { padding: 96px 0; }
+    .intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; margin-bottom: 88px; }
+    .intro > div:last-child { padding-top: 8px; }
+    h2 { margin-bottom: 26px; font-size: clamp(32px, 5vw, 58px); line-height: .98; letter-spacing: -.06em; }
+    .intro p { margin-bottom: 0; color: var(--muted); font-size: 17px; line-height: 1.75; max-width: 680px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 8px 12px; border: 1px solid #d6e8a4; background: #f5fbe4; border-radius: 999px; color: #4d6410; font-size: 12px; font-weight: 850; }
+    .pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #8dbb00; }
+
+    .day { margin-top: 84px; scroll-margin-top: 96px; }
+    .day + .day { margin-top: 118px; }
+    .day-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 50px; }
+    .day-heading h2 { max-width: 760px; }
+    .day-heading h2 { margin-bottom: 0; }
+    .rooms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .room { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 8px 22px rgba(17, 19, 24, .04); }
+    .room-header { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 18px 20px; background: var(--ink); color: #fff; }
+    .room-header h3 { margin: 0; font-size: 18px; letter-spacing: -.02em; }
+    .room-header span { color: var(--accent-2); font-size: 11px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .agenda { list-style: none; padding: 0; margin: 0; }
+    .slot { display: grid; grid-template-columns: 88px 1fr; gap: 18px; padding: 22px 22px; border-bottom: 1px solid var(--line); }
+    .slot:last-child { border-bottom: 0; }
+    .time { color: var(--blue); font-size: 12px; font-weight: 900; white-space: nowrap; padding-top: 2px; }
+    .session-title { margin: 0 0 9px; font-size: 15px; line-height: 1.38; font-weight: 820; letter-spacing: -.012em; }
+    .speaker { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .empty .session-title { color: #7b838b; font-weight: 650; }
+    .empty .time { color: #8a939d; }
+    .source-note { margin-top: 22px; color: var(--muted); font-size: 12px; }
+
+    .info-band { margin-top: 108px; padding: 42px; border-radius: var(--radius-lg); background: var(--accent); display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; }
+    .info-band h2 { margin-bottom: 18px; font-size: clamp(28px, 4vw, 44px); }
+    .info-band p { margin-bottom: 0; max-width: 700px; color: #3e4c0e; line-height: 1.65; }
+    .info-band .button-primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .info-band .button-secondary { background: #fff; color: var(--ink); border-color: #fff; }
+
+    footer { padding: 34px 0 42px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .footer-grid { display: flex; justify-content: flex-start; gap: 20px; flex-wrap: wrap; text-align: left; }
+    footer a { font-weight: 400; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    @media (max-width: 780px) {
+      .wrap { width: min(100% - 24px, 620px); }
+      .nav { min-height: 62px; }
+      .nav-links { gap: 11px; font-size: 11px; }
+      .nav-links a:nth-child(1) { display: none; }
+      .hero { padding-top: 56px; }
+      .hero-grid, .intro, .rooms, .info-band { grid-template-columns: 1fr; }
+      .hero-grid { gap: 42px; }
+      h1 { margin-bottom: 26px; font-size: clamp(48px, 15vw, 76px); }
+      .hero-copy { line-height: 1.6; }
+      .hero-card { padding: 26px 22px; }
+      main { padding: 72px 0; }
+      .intro { gap: 34px; margin-bottom: 64px; }
+      .intro > div:last-child { padding-top: 0; }
+      h2 { margin-bottom: 20px; }
+      .day { margin-top: 72px; }
+      .day + .day { margin-top: 88px; }
+      .day-heading { display: block; margin-bottom: 36px; }
+      .rooms { gap: 20px; }
+      .slot { grid-template-columns: 78px 1fr; padding: 20px 18px; gap: 14px; }
+      .room-header { padding: 18px 18px; }
+      .info-band { margin-top: 82px; padding: 30px 24px; gap: 28px; }
+    }
+    @media (max-width: 420px) {
+      .nav-links a { display: none; }
+      .actions .button { width: 100%; }
+      .slot { grid-template-columns: 1fr; gap: 7px; padding: 18px 16px; }
+      .time { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#agenda">Ir a la agenda</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="REPORT 2026, inicio">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span class="brand-text">REPORT<small>2026</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#evento">Evento</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#acreditacion">Acreditación</a>
+        <a href="https://www.instagram.com/exporeport2026/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">1, 2, 3… REPORT 2026</p>
+        <h1>Charlas que conectan tecnología y negocios.</h1>
+        <p class="hero-copy">Presentaciones técnico-comerciales a cargo de sponsors y expositores de la industria de pinturas y recubrimientos, dentro de la exposición REPORT 2026.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://intercongress.ar/Inscripciones_Web/2026/report/" target="_blank" rel="noopener">Pre-acreditarse</a>
+          <a class="button button-secondary" href="#agenda">Ver agenda</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Información principal del evento">
+        <dl>
+          <div><dt>Fechas</dt><dd>1, 2 y 3 de septiembre de 2026</dd></div>
+          <div><dt>Sede</dt><dd>Golden Center · Parque Norte<br><small>Buenos Aires, Argentina</small></dd></div>
+          <div><dt>Charlas técnico-comerciales</dt><dd>15:30 a 19:00<br><small>Ingreso sin cargo al sector de exposición, preferentemente con pre-acreditación online.</small></dd></div>
+          <div><dt>Salas</dt><dd>Sala 1 · Sala 2</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <section class="intro" id="evento">
+        <div>
+          <p class="section-kicker">Exposición REPORT 2026</p>
+          <span class="pill">Actividad gratuita</span>
+        </div>
+        <div>
+          <h2>Una agenda para actualizarse y generar nuevas conexiones profesionales.</h2>
+          <p>Durante tres jornadas, la exposición reúne soluciones, tecnologías, materias primas, equipamiento y desarrollos para el mercado de recubrimientos. Las charlas técnico-comerciales acercan presentaciones de productos y soluciones de los patrocinadores en auditorios asignados.</p>
+        </div>
+      </section>
+
+      <section id="agenda" aria-labelledby="agenda-title">
+
+
+        <article class="day" id="martes-1">
+          <div class="day-heading"><h2>Martes 1 de septiembre</h2></div>
+          <div class="rooms">
+            <section class="room" aria-labelledby="martes-sala-1"><div class="room-header"><h3 id="martes-sala-1">Sala 1</h3><span>Martes 1</span></div><ol class="agenda">
+              <li class="slot empty"><time class="time">15:30–16:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+              <li class="slot"><time class="time">16:00–16:30</time><div><p class="session-title">Equipos Elcometer para control de calidad en recubrimientos.</p><p class="speaker">Fernando Cavalieri · COLOR + QC</p></div></li>
+              <li class="slot"><time class="time">16:30–17:00</time><div><p class="session-title">Reemplazo de plomo en el sistema tintométrico para pinturas industriales.</p><p class="speaker">Rubén Garay · INQUIRE</p></div></li>
+              <li class="slot"><time class="time">17:00–17:30</time><div><p class="session-title">Conductividad y pH.</p><p class="speaker">Daniel Braguinsky · TDC</p></div></li>
+              <li class="slot"><time class="time">17:30–18:00</time><div><p class="session-title">Resistencia al frote y versatilidad formulativa: conozca Acronal® RS 724.</p><p class="speaker">Caroline Reggiani · BASF</p></div></li>
+              <li class="slot"><time class="time">18:00–18:30</time><div><p class="session-title">SMART CHEMICALS</p><p class="speaker">Presentación consignada en la fuente oficial.</p></div></li>
+              <li class="slot empty"><time class="time">18:30–19:00</time><div><p class="session-title">SMART CHEMICALS</p><p class="speaker">Presentación consignada en la fuente oficial.</p></div></li>
+            </ol></section>
+            <section class="room" aria-labelledby="martes-sala-2"><div class="room-header"><h3 id="martes-sala-2">Sala 2</h3><span>Martes 1</span></div><ol class="agenda">
+              <li class="slot empty"><time class="time">15:30–16:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+              <li class="slot"><time class="time">16:00–16:30</time><div><p class="session-title">Presentación de PARTIQ 3X: carga sintética multifunción.</p><p class="speaker">Walter Schwartz · ZIM ZUM</p></div></li>
+              <li class="slot"><time class="time">16:30–17:00</time><div><p class="session-title">Presentación institucional.</p><p class="speaker">Natalia Weber · ATC BIOCIDES – MATHIESEN ARGENTINA</p></div></li>
+              <li class="slot"><time class="time">17:00–17:30</time><div><p class="session-title">Más allá de la viscosidad: cómo optimizar la reología y el rendimiento con Natrosol, Aquaflow y Aquavis.</p><p class="speaker">Paula Donnantuoni · Ashland</p></div></li>
+              <li class="slot"><time class="time">17:30–18:00</time><div><p class="session-title">Sistemas avanzados de silanos para la protección de techos con revestimientos de membranas e impermeabilizantes.</p><p class="speaker">Juliano Costa · CAS MOMENTIVE / MARPAQ</p></div></li>
+              <li class="slot"><time class="time">18:00–18:30</time><div><p class="session-title">Dosificadoras de colorantes Corob para planta o distribuidoras.</p><p class="speaker">Ignacio Márquez · Corob; Daniel Braguinsky · Tecnología del Color</p></div></li>
+              <li class="slot empty"><time class="time">18:30–19:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+            </ol></section>
+          </div>
+        </article>
+
+        <article class="day" id="miercoles-2">
+          <div class="day-heading"><h2>Miércoles 2 de septiembre</h2></div>
+          <div class="rooms">
+            <section class="room" aria-labelledby="miercoles-sala-1"><div class="room-header"><h3 id="miercoles-sala-1">Sala 1</h3><span>Miércoles 2</span></div><ol class="agenda">
+              <li class="slot"><time class="time">15:30–16:00</time><div><p class="session-title">Más Protección, Menos Emisiones: Tecnología de Resinas de Silicona 100% Sólidas para Recubrimientos Industriales.</p><p class="speaker">Juliana Fonseca · Wacker / Mathiesen</p></div></li>
+              <li class="slot"><time class="time">16:00–16:30</time><div><p class="session-title">Presentación de Fluid Management en Argentina.</p><p class="speaker">COLOR + QC</p></div></li>
+              <li class="slot"><time class="time">16:30–17:00</time><div><p class="session-title">Ampliación de los sistemas de tinting para pinturas arquitectónicas.</p><p class="speaker">Rubén Garay · INQUIRE</p></div></li>
+              <li class="slot"><time class="time">17:00–17:30</time><div><p class="session-title">La importancia del conocimiento de la medición de color en la industria.</p><p class="speaker">Daniel Braguinsky · TDC</p></div></li>
+              <li class="slot"><time class="time">17:30–18:00</time><div><p class="session-title">Cargas minerales, rellenos inteligentes y extensores de dióxido de titanio: entendiendo las claves de selección y formulación.</p><p class="speaker">Gerardo Matysiak · OMYA QUIMIN</p></div></li>
+              <li class="slot"><time class="time">18:00–18:30</time><div><p class="session-title">Presentación Elcomter y Rhopoint en Argentina.</p><p class="speaker">COLOR + QC</p></div></li>
+              <li class="slot empty"><time class="time">18:30–19:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+            </ol></section>
+            <section class="room" aria-labelledby="miercoles-sala-2"><div class="room-header"><h3 id="miercoles-sala-2">Sala 2</h3><span>Miércoles 2</span></div><ol class="agenda">
+              <li class="slot"><time class="time">15:30–16:00</time><div><p class="session-title">Polímeros de avanzada para coatings de alta performance.</p><p class="speaker">Carlos Bonessa · MULTIQUIMICA C América / NOVA PQ; H. Torres · NOVA PQ</p></div></li>
+              <li class="slot"><time class="time">16:00–16:30</time><div><p class="session-title">Presentación de PARTIQ 3X: carga sintética multifunción.</p><p class="speaker">Walter Schwartz · ZIM ZUM</p></div></li>
+              <li class="slot"><time class="time">16:30–17:00</time><div><p class="session-title">Automatización industrial aplicada a fabricación de pinturas y resinas.</p><p class="speaker">F. Berrone · Ventos International</p></div></li>
+              <li class="slot"><time class="time">17:00–17:30</time><div><p class="session-title">Aditivos que impulsan el desempeño: control de espuma y pH.</p><p class="speaker">Paula Donnantuoni · Ashland</p></div></li>
+              <li class="slot"><time class="time">17:30–18:00</time><div><p class="session-title">Eficiencia reológica en masillas y texturas, Rheovis® HS 1185.</p><p class="speaker">Marlon Braidott · BASF</p></div></li>
+              <li class="slot"><time class="time">18:00–18:30</time><div><p class="session-title">Acronal® 1840 en sistemas cementicios: flexibilidad e impermeabilidad.</p><p class="speaker">Caroline Reggiani · BASF</p></div></li>
+              <li class="slot empty"><time class="time">18:30–19:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+            </ol></section>
+          </div>
+        </article>
+
+        <article class="day" id="jueves-3">
+          <div class="day-heading"><h2>Jueves 3 de septiembre</h2></div>
+          <div class="rooms">
+            <section class="room" aria-labelledby="jueves-sala-1"><div class="room-header"><h3 id="jueves-sala-1">Sala 1</h3><span>Jueves 3</span></div><ol class="agenda">
+              <li class="slot"><time class="time">15:30–16:00</time><div><p class="session-title">SILRES®: Innovación en Tecnología de Silicona para Recubrimientos de Alto Desempeño.</p><p class="speaker">Laura Zanella · Wacker / Mathiesen</p></div></li>
+              <li class="slot empty"><time class="time">16:00–16:30</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+              <li class="slot"><time class="time">16:30–17:00</time><div><p class="session-title">Revestimientos con propiedades de aislación térmica con el uso de microesferas.</p><p class="speaker">Gerardo Matysiak · OMYA QUIMIN</p></div></li>
+              <li class="slot"><time class="time">17:00–17:30</time><div><p class="session-title">Más que rendimiento: cómo Acronal® Edge 6338 ayuda a diferenciar pinturas arquitectónicas.</p><p class="speaker">Caroline Reggiani · BASF</p></div></li>
+              <li class="slot"><time class="time">17:30–18:00</time><div><p class="session-title">Más durabilidad y mejor apariencia: el valor de Dispex® CX 4248 SG en un mercado competitivo.</p><p class="speaker">Marlon Braidott · BASF</p></div></li>
+              <li class="slot empty"><time class="time">18:00–19:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+            </ol></section>
+            <section class="room" aria-labelledby="jueves-sala-2"><div class="room-header"><h3 id="jueves-sala-2">Sala 2</h3><span>Jueves 3</span></div><ol class="agenda">
+              <li class="slot empty"><time class="time">15:30–16:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+              <li class="slot"><time class="time">16:00–16:30</time><div><p class="session-title">SMART CHEMICALS</p><p class="speaker">Presentación consignada en la fuente oficial.</p></div></li>
+              <li class="slot"><time class="time">16:30–17:00</time><div><p class="session-title">Control inteligente de espuma: la propuesta de valor de Foamaster® MO 2157.</p><p class="speaker">Marlon Braidott · BASF</p></div></li>
+              <li class="slot"><time class="time">17:00–17:30</time><div><p class="session-title">Polímeros de avanzada para coatings de alta performance.</p><p class="speaker">Carlos Bonessa · MULTIQUIMICA C América / NOVA PQ; H. Torres · NOVA PQ</p></div></li>
+              <li class="slot empty"><time class="time">17:30–19:00</time><div><p class="session-title">Horario sin presentación consignada</p><p class="speaker">Consultar actualización del programa en la sede.</p></div></li>
+            </ol></section>
+          </div>
+        </article>
+      </section>
+
+      <section class="info-band" id="acreditacion" aria-labelledby="acreditacion-title">
+        <div><h2 id="acreditacion-title">Participá de la exposición.</h2><p>El ingreso al sector de stands y a las Charlas Técnico Comerciales es sin cargo. La pre-acreditación online es preferente para facilitar el acceso.</p></div>
+        <div class="actions"><a class="button button-primary" href="https://intercongress.ar/Inscripciones_Web/2026/report/" target="_blank" rel="noopener">Pre-acreditarse</a><a class="button button-secondary" href="https://www.instagram.com/exporeport2026/" target="_blank" rel="noopener">Seguir en Instagram</a></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid"><span>Desarrollado por <a href="https://www.condegraphics.com/" target="_blank" rel="noopener">Conde Graphics | AI-First SEO Agency Argentina</a></span></div>
+    </div>
+  </footer>
+</body>
+</html>
