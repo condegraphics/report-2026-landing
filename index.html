@@ -14,10 +14,15 @@
         <span class="brand-mark" aria-hidden="true">R</span>
         <span><strong>REPORT</strong><small>2026</small></span>
       </a>
-      <nav class="main-nav" aria-label="Navegación principal">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú">
+        <span class="sr-only">Menú</span>
+        <span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <nav class="main-nav" id="site-menu" aria-label="Navegación principal">
         <a href="#evento">Evento</a>
         <a href="#agenda">Agenda</a>
         <a href="#tarifas">Tarifas</a>
+        <a href="#ubicacion">Cómo llegar</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -145,6 +150,20 @@
       </div>
     </section>
 
+    <section id="ubicacion" class="section section-soft location-section" aria-labelledby="ubicacion-title">
+      <div class="container location-grid">
+        <div>
+          <p class="eyebrow">Ubicación del evento</p>
+          <h2 id="ubicacion-title">Cómo llegar a REPORT 2026.</h2>
+          <p>Golden Center es una sede estratégica para eventos profesionales en la Ciudad de Buenos Aires, ubicada en Núñez, junto a Parque Norte y a metros de Aeroparque.</p>
+          <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Goldencenter+Eventos" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.1956698586696!2d-58.438365523532994!3d-34.54860085459074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb43b95c1eb93%3A0xad90f72012d90499!2sGoldencenter%20Eventos!5e0!3m2!1ses-419!2sar!4v1787316994694!5m2!1ses-419!2sar" title="Mapa de ubicación de Goldencenter Eventos" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto" class="section section-soft">
       <div class="container contact-grid">
         <div class="section-heading"><p class="eyebrow">Consultas e inscripción</p><h2>Coordiná tu participación</h2><p>Contactá al equipo correspondiente para resolver dudas sobre el Congreso Técnico, la inscripción y las actividades de la Escuela de Tecnología de Recubrimientos.</p></div>
@@ -156,6 +175,26 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><p><strong>REPORT 2026</strong><br>Golden Center · Parque Norte · Buenos Aires</p><p>Fuente de consulta: <a href="https://docs.google.com/spreadsheets/d/1Pq9K7dylSulyq3pTvN4ViTu7qys8TDyTgdSLRZVzh5k/edit?gid=705231100#gid=705231100" target="_blank" rel="noopener">Programa y actividades del Congreso ATIPAT</a></p></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><p>Desarrollado por <a href="https://www.condegraphics.com/" target="_blank" rel="noopener">Conde Graphics | AI-First SEO Agency</a></p></div></footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const siteMenu = document.querySelector('#site-menu');
+    if (menuToggle && siteMenu) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+        siteMenu.classList.toggle('is-open', !isOpen);
+      });
+      siteMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Abrir menú');
+          siteMenu.classList.remove('is-open');
+        });
+      });
+    }
+  </script>
 </body>
 </html>
