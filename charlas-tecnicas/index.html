@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f7f8">
+  <link rel="icon" type="image/png" href="report-icon.png">
+  <link rel="apple-touch-icon" href="report-icon.png">
   <meta name="description" content="Agenda de las Charlas Técnico Comerciales de REPORT 2026. Presentaciones gratuitas de sponsors y expositores, del 1 al 3 de septiembre, de 15:30 a 19:00, en Golden Center – Parque Norte.">
   <title>Charlas Técnico Comerciales | REPORT 2026</title>
   <style>
@@ -43,10 +45,8 @@
       border-bottom: 1px solid rgba(227, 231, 235, .9);
     }
     .nav { position: relative; min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 900; letter-spacing: -.04em; }
-    .brand-mark { width: 34px; height: 34px; border-radius: 11px 4px 11px 4px; display: grid; place-items: center; background: var(--accent); font-weight: 950; font-size: 20px; }
-    .brand-text { font-size: 15px; line-height: .9; }
-    .brand-text small { display: block; font-size: 9px; letter-spacing: .16em; margin-top: 4px; }
+    .brand { display: inline-flex; align-items: center; width: 176px; text-decoration: none; }
+    .brand-logo { display: block; width: 100%; height: auto; max-height: 54px; object-fit: contain; object-position: left center; }
     .nav-links { display: flex; gap: 18px; align-items: center; font-size: 13px; font-weight: 750; }
     .nav-links a { text-decoration: none; }
     .nav-links a:hover, .nav-links a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
@@ -130,7 +130,9 @@
 
     @media (max-width: 780px) {
       .wrap { width: min(100% - 40px, 620px); }
-      .nav { min-height: 62px; }
+      .nav { min-height: 68px; }
+      .brand { width: 142px; }
+      .brand-logo { max-height: 46px; }
       .menu-toggle { display: inline-flex; }
       .nav-links { display: none; position: absolute; top: calc(100% + 10px); right: 0; left: 0; z-index: 10; flex-direction: column; align-items: stretch; gap: 0; padding: 8px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255, 255, 255, .98); box-shadow: var(--shadow); font-size: 16px; }
       .nav-links.is-open { display: flex; }
@@ -172,6 +174,8 @@
       .nav-links a { display: block; }
       .actions .button { width: 100%; }
       .wrap { width: min(100% - 32px, 620px); }
+      .brand { width: 128px; }
+      .brand-logo { max-height: 42px; }
       .nav-links { left: 0; right: 0; }
       .whatsapp-float { right: 14px; bottom: 14px; }
       .slot { grid-template-columns: 1fr; gap: 8px; padding: 20px 16px; }
@@ -186,8 +190,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#inicio" aria-label="REPORT 2026, inicio">
-        <span class="brand-mark" aria-hidden="true">R</span>
-        <span class="brand-text">REPORT<small>2026</small></span>
+        <img class="brand-logo" src="logo-report.png" alt="REPORT 2026">
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú">
         <span class="sr-only">Menú</span>
