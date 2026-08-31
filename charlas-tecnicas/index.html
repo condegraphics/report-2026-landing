@@ -132,11 +132,9 @@
     .info-band .button-secondary { background: #fff; color: var(--ink); border-color: #fff; }
 
     .location-section { margin-top: 112px; padding: 42px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: 0 8px 22px rgba(17, 19, 24, .04); }
-    .location-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 36px; align-items: center; }
+    .location-grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: center; }
     .location-section h2 { margin-bottom: 16px; font-size: clamp(28px, 4vw, 46px); }
     .location-section p { margin-bottom: 24px; color: var(--muted); line-height: 1.65; }
-    .map-frame { min-height: 360px; overflow: hidden; border-radius: var(--radius-md); background: #e9edf0; }
-    .map-frame iframe { display: block; width: 100%; height: 360px; border: 0; }
     .whatsapp-float { position: fixed; right: 22px; bottom: 22px; z-index: 20; display: inline-flex; align-items: center; gap: 9px; min-height: 52px; padding: 0 18px; border-radius: 999px; background: #1f9d55; color: #fff; box-shadow: 0 12px 26px rgba(17, 19, 24, .2); text-decoration: none; font-size: 14px; font-weight: 850; }
     .whatsapp-float:hover, .whatsapp-float:focus-visible { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(17, 19, 24, .26); }
     .whatsapp-icon { width: 20px; height: 20px; fill: currentColor; }
@@ -182,7 +180,6 @@
       .info-band { margin-top: 94px; padding: 34px 24px; gap: 30px; }
       .info-band p { font-size: 17px; line-height: 1.65; }
       .location-section { margin-top: 86px; padding: 30px 22px; }
-      .map-frame, .map-frame iframe { min-height: 300px; height: 300px; }
       .whatsapp-float { right: 16px; bottom: 16px; min-height: 50px; padding: 0 16px; }
       .actions { gap: 16px; }
       .actions .button { min-height: 52px; font-size: 16px; }
@@ -335,13 +332,10 @@
       <section class="location-section" id="ubicacion" aria-labelledby="ubicacion-title">
         <div class="location-grid">
           <div>
-            <p class="section-kicker">Ubicación del evento</p>
+            <p class="section-kicker">Accesos al Evento</p>
             <h2 id="ubicacion-title">Cómo llegar a REPORT 2026.</h2>
             <p>Golden Center es una sede estratégica para eventos profesionales en la Ciudad de Buenos Aires, ubicada en Núñez, junto a Parque Norte y a metros de Aeroparque.</p>
-            <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Goldencenter+Eventos" target="_blank" rel="noopener">Abrir en Google Maps</a>
-          </div>
-          <div class="map-frame">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.1956698586696!2d-58.438365523532994!3d-34.54860085459074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb43b95c1eb93%3A0xad90f72012d90499!2sGoldencenter%20Eventos!5e0!3m2!1ses-419!2sar!4v1787316994694!5m2!1ses-419!2sar" title="Mapa de ubicación de Goldencenter Eventos" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <a class="button button-primary" href="https://condegraphics.github.io/como-llegar/" target="_blank" rel="noopener">Ver todos los accesos</a>
           </div>
         </div>
       </section>
